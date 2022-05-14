@@ -1,11 +1,13 @@
-— name: 'gcr.io/cloud-builders/gcloud'
- args:
- — functions
- — deploy
- — — runtime=Python 3.9
- — — trigger-http
- — — source=./ # Function source files
- — — entry-point=helloCiCd # Function entry point
- — helloCiCd # Function name
- waitFor: ['_']
- id: 'deploying-a-serverless-function'
+--- 
+steps: 
+  - 
+    args: 
+      - functions
+      - deploy
+      - 
+        - "runtime=Python 3.9"
+        - trigger-http
+        - source=./
+        - entry-point=helloCiCd
+      - helloCiCd
+    name: gcr.io/cloud-builders/docker
