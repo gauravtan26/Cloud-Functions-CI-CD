@@ -5,9 +5,9 @@ steps:
       - functions
       - deploy
       - 
-        - "runtime=Python 3.9"
+        - runtime=Python 3.9
         - trigger-http
         - source=./
         - entry-point=helloCiCd
       - helloCiCd
-    name: gcr.io/cloud-builders/docker
+    name: 'gcr.io/cloud-builders/gcloud'
