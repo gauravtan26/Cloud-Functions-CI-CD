@@ -16,5 +16,3 @@ steps:
         - helloCiCd
     id: deploying-a-serverless-function
     name: gcr.io/cloud-builders/gcloud
-    waitFor: 
-      - _
