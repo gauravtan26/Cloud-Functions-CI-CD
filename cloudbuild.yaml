@@ -1,13 +1,12 @@
---- 
-steps: 
-  - 
-    args: 
-      - functions
-      - deploy
-      - 
-        - runtime=Python 3.9
-        - trigger-http
-        - source=./
-        - entry-point=helloCiCd
-      - helloCiCd
-    name: 'gcr.io/cloud-builders/gcloud'
+steps:
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: 
+  - functions
+  - deploy
+  - - runtime="Python 3.9"
+  - - trigger-http
+  - - source=./ 
+  - - entry-point=helloCiCd
+  - - helloCiCd
+  waitFor: ['_']
+  id: 'deploying-a-serverless-function'
