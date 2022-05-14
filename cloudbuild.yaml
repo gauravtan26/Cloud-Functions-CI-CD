@@ -5,7 +5,7 @@ steps:
       - functions
       - deploy
       - 
-        - "runtime=\"Python 3.9\""
+        - "runtime = Python 3.9"
       - 
         - trigger-http
       - 
@@ -14,5 +14,5 @@ steps:
         - entry-point=helloCiCd
       - 
         - helloCiCd
-    id: deploying-a-serverless-function
-    name: gcr.io/cloud-builders/gcloud
+    id: 'deploying-a-serverless-function'
+    name: 'gcr.io/cloud-builders/gcloud'
